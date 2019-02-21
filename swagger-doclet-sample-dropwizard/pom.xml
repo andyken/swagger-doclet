@@ -78,7 +78,7 @@
                             <docletArtifact>
                                 <groupId>com.tenxerconsulting</groupId>
 								<artifactId>swagger-doclet</artifactId>
-        						<version>${project.version}</version>
+        						<version>1.0.7</version>
         					</docletArtifact>
                             <reportOutputDirectory>${project.build.outputDirectory}</reportOutputDirectory>
                             <useStandardDocletOptions>false</useStandardDocletOptions>
