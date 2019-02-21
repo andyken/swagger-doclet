@@ -69,16 +69,20 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
+                <configuration>
+                    <debug>true</debug>
+                </configuration>
                 <executions>
                     <execution>
                         <id>generate-service-docs</id>
                         <phase>generate-resources</phase>
                         <configuration>
+                            <debug>true</debug>
                             <doclet>com.tenxerconsulting.swagger.doclet.ServiceDoclet</doclet>
                             <docletArtifact>
                                 <groupId>com.tenxerconsulting</groupId>
 								<artifactId>swagger-doclet</artifactId>
-        						<version>1.0.7</version>
+        						<version>${project.version}</version>
         					</docletArtifact>
                             <reportOutputDirectory>${project.build.outputDirectory}</reportOutputDirectory>
                             <useStandardDocletOptions>false</useStandardDocletOptions>
@@ -89,7 +93,7 @@
                         	<additionalparam>-apiVersion 1 -docBasePath http://127.0.0.1:7070/apidocs -apiBasePath / -swaggerUiPath ../../../src/main/resources/swagger-ui-2.1.0</additionalparam>
                         	 -->
                         	<!-- Example using relative paths for both with embedded ui -->
-                            <additionalparam>-apiVersion 1 -docBasePath /apidocs -apiBasePath /</additionalparam>
+                            <additionalparam>-apiVersion 1 -docBasePath /apidocs -apiBasePath / -logDebug true</additionalparam>
                             
                             <!-- Example using relative paths for both
                             <additionalparam>-apiVersion 1 -docBasePath /apidocs -apiBasePath / -swaggerUiPath ../../../src/main/resources/swagger-ui-2.1.0</additionalparam>

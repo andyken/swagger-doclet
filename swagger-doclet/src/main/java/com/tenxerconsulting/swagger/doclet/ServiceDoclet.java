@@ -10,6 +10,11 @@ import com.tenxerconsulting.swagger.doclet.parser.JaxRsAnnotationParser;
 @SuppressWarnings("javadoc")
 public class ServiceDoclet {
 
+    public static void main(String[] args) {
+        String[] docs = new String[]{"-doclet " + ServiceDoclet.class.getName()};
+        com.sun.tools.javadoc.Main.execute(docs);
+    }
+
 	/**
 	 * Generate documentation here.
 	 * This method is required for all doclets.
@@ -17,6 +22,8 @@ public class ServiceDoclet {
 	 * @return true on success.
 	 */
 	public static boolean start(RootDoc doc) {
+
+        System.out.println("start haha");
 
 		long start = System.currentTimeMillis();
 
